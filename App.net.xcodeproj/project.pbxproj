@@ -27,6 +27,7 @@
 		91F54B2C186773C400F75F5D /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F54B2B186773C400F75F5D /* Member.m */; };
 		91F54B2F186773DB00F75F5D /* ManagedMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F54B2E186773DB00F75F5D /* ManagedMember.m */; };
 		91F54B321867749800F75F5D /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F54B311867749800F75F5D /* CustomCell.m */; };
+		91F54B35186775E400F75F5D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F54B34186775E400F75F5D /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		91F54B2E186773DB00F75F5D /* ManagedMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagedMember.m; sourceTree = "<group>"; };
 		91F54B301867749800F75F5D /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		91F54B311867749800F75F5D /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		91F54B33186775E400F75F5D /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		91F54B34186775E400F75F5D /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +200,8 @@
 		91F54B291867733B00F75F5D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				91F54B33186775E400F75F5D /* MainViewController.h */,
+				91F54B34186775E400F75F5D /* MainViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 				91F54B061867725D00F75F5D /* App_net.xcdatamodeld in Sources */,
 				91F54B321867749800F75F5D /* CustomCell.m in Sources */,
 				91F54AFF1867725D00F75F5D /* main.m in Sources */,
+				91F54B35186775E400F75F5D /* MainViewController.m in Sources */,
 				91F54B2C186773C400F75F5D /* Member.m in Sources */,
 				91F54B2F186773DB00F75F5D /* ManagedMember.m in Sources */,
 			);
