@@ -9,9 +9,16 @@
 #ifndef __IPHONE_3_0
 #warning "This project uses features only available in iOS SDK 3.0 and later."
 #endif
+#define MR_SHORTHAND
+#define FONT(s) [UIFont fontWithName:@"Helvetica-Light" size:s]
 
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
+    #import <CoreGraphics/CoreGraphics.h>
+    #import "AFNetworking.h"
+    #import "Member.h"
+    #import "ManagedMember.h"
+    #import "CoreData+MagicalRecord.h"
 #endif
