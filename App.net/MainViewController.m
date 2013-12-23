@@ -15,21 +15,35 @@
 @implementation MainViewController
 @synthesize members;
 @synthesize tableView;
+int f=0;
+@synthesize loader;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [ManagedMember loadDataFromWebService];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(finishedLoad) name:@"notificationLoadMembersNewsFinished" object:nil];
+
     members = [Member findAllSortedBy:@"created_at" ascending:NO];
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(dropViewDidBeginRefreshing:) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:refreshControl];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self.tableView reloadData];
+    if (f == 0) {
+        [ManagedMember loadDataFromWebService];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(finishedLoad) name:@"notificationLoadMembersNewsFinished" object:nil];
+        f = 1;
+    }else{
+        [self finishedLoad];
+    }
 }
+
+
+-(void)finishedLoad{
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"notificationLoadMembersNewsFinished" object:nil];
+    [self.tableView reloadData];
+    [loader stopAnimating];
+}
+
 
 - (void)dropViewDidBeginRefreshing:(UIRefreshControl *)refreshControl
 {
@@ -62,7 +76,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CustomCell *Cell = [[CustomCell alloc] init];
-    Cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    Cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
     Member *n = [members objectAtIndex:indexPath.row];
     [Cell.avatar setImage:[UIImage imageWithData:n.avatar]];
     Cell.avatar.layer.cornerRadius = 35;
@@ -91,7 +105,7 @@
                    sizeWithFont:[UIFont systemFontOfSize:14]
                    constrainedToSize:CGSizeMake(300, CGFLOAT_MAX)];
     NSLog(@"%f", size.height);
-    return size.height + 150;
+    return size.height+150;
 }
 
 @end

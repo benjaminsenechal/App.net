@@ -11,5 +11,6 @@
 @interface MainViewController : UIViewController
 @property (strong, nonatomic) IBOutlet NSArray *members;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *loader;
 
 @end

@@ -43,6 +43,7 @@
                 [localContext saveToPersistentStoreAndWait];
             }
         }
+        [[NSNotificationCenter defaultCenter]postNotification:[NSNotification notificationWithName:@"notificationLoadMembersNewsFinished" object:nil]];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);

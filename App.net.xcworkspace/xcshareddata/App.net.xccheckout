@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>ED09D7FF-616E-4CCF-864A-5B367291C2BE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>App.net</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5199A950-6083-42FE-83BE-C458DC82E2DE</key>
+		<string>ssh://github.com/benjaminsenechal/App.net.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>App.net.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5199A950-6083-42FE-83BE-C458DC82E2DE</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/benjaminsenechal/App.net.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5199A950-6083-42FE-83BE-C458DC82E2DE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5199A950-6083-42FE-83BE-C458DC82E2DE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>App</string>
+		</dict>
+	</array>
+</dict>
+</plist>
